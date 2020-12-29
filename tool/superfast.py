@@ -3,7 +3,7 @@ import os
 import art
 from art import *
 os.system("clear")
-#l
+
 print("Downloading SFII Index from https://mesyeti.uk/sfii")
 url = "https://www.mesyeti.uk/sfii/superfast.txt"
 r = requests.get(url, allow_redirects=True)
@@ -28,16 +28,7 @@ while True:
             os.system("clear")
             print(text2art("SuperFast Internet Index"))
         elif search == "sfii:all":
-            print("Creating..")
-            all = []
-            entry = 1
-            for entry in superfast:
-                if entry[:8] == "https://":
-                    break
-                else:
-                    all.append(superfast[entry])
-            for link in all:
-                print(all[link] +"\n")
+            print(superfast)
         else:
             print("Unrecognised command!")
     else:
