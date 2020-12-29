@@ -24,6 +24,7 @@ while True:
             print("Updating offline index.. (https://mesyeti.uk/sfii/superfast.txt)")
             url = "https://www.mesyeti.uk/sfii/superfast.txt"
             r = requests.get(url, allow_redirects=True)
+            open('superfast.txt', 'wb').write(r.content)
             print("Done.")
         elif search == "sfii:reset":
             os.system("clear")
