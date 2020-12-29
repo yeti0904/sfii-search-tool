@@ -7,6 +7,7 @@ os.system("clear")
 print("Downloading SFII Index from https://mesyeti.uk/sfii")
 url = "https://www.mesyeti.uk/sfii/superfast.txt"
 r = requests.get(url, allow_redirects=True)
+open('superfast.txt', 'wb').write(r.content)
 print("Done.\nImporting SuperFast index..")
 superfast = [line.rstrip('\n') for line in open("superfast.txt")]
 print("Succesfully imported SuperFast Index")
