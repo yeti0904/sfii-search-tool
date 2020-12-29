@@ -29,10 +29,14 @@ while True:
             print(text2art("SuperFast Internet Index"))
         elif search == "sfii:all":
             print("Creating..")
-            entry = 1
+            superall = []
+            for item in superfast:
+                if item[:4] == "https":
+                    break
+                else:
+                    superall.append(item)
             for entry in superfast:
                 print(entry +"\n")
-                entry += 2
         else:
             print("Unrecognised command!")
     else:
