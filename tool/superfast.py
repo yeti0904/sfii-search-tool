@@ -15,9 +15,9 @@ os.system("clear")
 print(text2art("SuperFast Internet Index"))
 while True:
     search = str(input("Search: "))
-    if search == "":
-        print("Don't search nothing!")
-    elif search[:5] == "sfii:":
+    #if search == "":
+    #    print("Don't search nothing!")
+    if search[:5] == "sfii:":
         if search == "sfii:help":
             print("\nsfii:help - List of commands")
         elif search == "sfii:update":
@@ -30,7 +30,8 @@ while True:
             os.system("clear")
             print(text2art("SuperFast Internet Index"))
         elif search == "sfii:all":
-            print(superfast)
+            for web in superfast:
+                print(web +"\n")
         else:
             print("Unrecognised command!")
     else:
