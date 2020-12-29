@@ -3,7 +3,7 @@ import os
 import art
 from art import *
 os.system("clear")
-
+#l
 print("Downloading SFII Index from https://mesyeti.uk/sfii")
 url = "https://www.mesyeti.uk/sfii/superfast.txt"
 r = requests.get(url, allow_redirects=True)
